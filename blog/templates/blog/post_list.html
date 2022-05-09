@@ -8,9 +8,10 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p><img class="img-article-left" src="{{post.photo.url}}"></p>
             <p>{{ post.text|linebreaksbr }}</p>
         </div>
-{% endfor %}
+    {% endfor %}
 
     <div class="pagination">
         <span class="step-links">
